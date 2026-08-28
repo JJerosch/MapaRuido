@@ -1,0 +1,874 @@
+﻿"Issue Type","Issue Id","Parent Id","Epic Name","Epic Link","Summary","Description","Story Points","Sprint","Priority","Labels"
+"Epic","1","","Coordenação","","E1 - Coordenação","O que destrava todo o resto: o professor, o dinheiro, o repositório e as datas.","","","Medium","mapa-ruido"
+"Epic","2","","Firmware / DSP","","E2 - Firmware / DSP","A estação transforma pressão sonora em CSV. É onde estão três das quatro tarefas de dificuldade Alta do projeto.","","","Medium","mapa-ruido"
+"Epic","3","","Hardware / calibração","","E3 - Hardware / calibração","Comprar, montar e transformar número relativo em dB SPL de verdade.","","","Medium","mapa-ruido"
+"Epic","4","","Campo","","E4 - Campo","Onde o dado nasce. É também o único épico em que o gargalo é agenda, não trabalho.","","","Medium","mapa-ruido"
+"Epic","5","","Dados / mapa","","E5 - Dados / mapa","Onde os números viram resultado. É o segundo épico mais pesado e o que mais aparece na feira.","","","Medium","mapa-ruido"
+"Epic","6","","Escrita / apresentação","","E6 - Escrita / apresentação","Metade da nota. Começa antes de existirem resultados, porque metodologia não depende de resultado.","","","Medium","mapa-ruido"
+"Story","7","","","Coordenação","US-01 Alinhar a reformulação com o professor","h3. Historia
+Como equipe, quero apresentar a reformulação de escopo ao professor e obter uma resposta explícita, para comprar hardware sabendo que o recorte está aceito.
+
+h3. Criterios de aceite
+* A conversa começou pelo que mantém a proposta dele, não pela crítica
+* O argumento do calçadão da XV foi apresentado como *pergunta interessante*, não como correção
+* Existe resposta explícita registrada: aceito · aceito com ressalvas · recusado
+* O novo título do trabalho foi confirmado com ele
+* O resultado está em Registro de Decisões com data
+* P-02 foi fechada em Status das Pendências
+
+h3. Rastreio
+* Origem no cofre: T1
+* Frente: Coordenação
+* Dono: João","3","Sprint 1","Medium","mapa-ruido Coordenação T1"
+"Sub-task","8","7","","","US-01.1 Reler A Hipótese em Teste e montar o roteiro de 5 minutos","","","Sprint 1","Medium","mapa-ruido"
+"Sub-task","9","7","","","US-01.2 Marcar a conversa (presencial, ou e-mail com o argumento escrito)","","","Sprint 1","Medium","mapa-ruido"
+"Sub-task","10","7","","","US-01.3 Apresentar o calçadão da XV como caso concreto","","","Sprint 1","Medium","mapa-ruido"
+"Sub-task","11","7","","","US-01.4 Confirmar o título e o recorte","","","Sprint 1","Medium","mapa-ruido"
+"Sub-task","12","7","","","US-01.5 Registrar a resposta em Registro de Decisões","","","Sprint 1","Medium","mapa-ruido"
+"Sub-task","13","7","","","US-01.6 Fechar P-02 em Status das Pendências","","","Sprint 1","Medium","mapa-ruido"
+"Story","14","","","Coordenação","US-02 Fechar o rateio financeiro e quem compra","h3. Historia
+Como grupo, quero o dinheiro acertado antes da compra, para ninguém adiantar R$500 e cobrar depois.
+
+h3. Criterios de aceite
+* O valor por pessoa está definido e comunicado aos 5 (~R$100, ver Orçamento em Camadas)
+* Existe um único responsável pela compra, nominal
+* Existe prazo de reembolso combinado, não ""depois a gente vê""
+* Ficou combinado que todas as notas fiscais são guardadas — a feira às vezes pede comprovação de custo
+* P-07 e P-08 fechadas
+
+h3. Rastreio
+* Origem no cofre: P-07, P-08
+* Frente: Coordenação
+* Dono: Guilherme Falcão","1","Sprint 1","Medium","mapa-ruido Coordenação P-07 P-08"
+"Sub-task","15","14","","","US-02.1 Levar o total estimado de Orçamento em Camadas para o grupo","","","Sprint 1","Medium","mapa-ruido"
+"Sub-task","16","14","","","US-02.2 Definir quem compra (um CPF só, para simplificar frete e rastreio)","","","Sprint 1","Medium","mapa-ruido"
+"Sub-task","17","14","","","US-02.3 Combinar prazo e forma de reembolso","","","Sprint 1","Medium","mapa-ruido"
+"Sub-task","18","14","","","US-02.4 Combinar quem guarda as notas fiscais","","","Sprint 1","Medium","mapa-ruido"
+"Sub-task","19","14","","","US-02.5 Fechar P-07 e P-08","","","Sprint 1","Medium","mapa-ruido"
+"Story","20","","","Coordenação","US-03 Repositório GitHub com estrutura e README","h3. Historia
+Como equipe, quero o projeto versionado desde antes da primeira linha de firmware, para não reorganizar arquivos soltos na véspera da feira.
+
+h3. Criterios de aceite
+* O repositório existe e os 5 membros têm acesso de escrita
+* A árvore é /firmware, /analise, /dados — a estrutura prevista em Entregáveis
+* O .gitignore foi criado antes do primeiro commit
+* O README traz título, resumo de uma frase e link para o cofre
+* GitHub Pages está habilitado — é onde T18 publica o mapa
+* P-09 fechada
+
+h3. Rastreio
+* Origem no cofre: P-09
+* Frente: Coordenação
+* Dono: Arthur","2","Sprint 2","Medium","mapa-ruido Coordenação P-09"
+"Sub-task","21","20","","","US-03.1 Criar o repositório e convidar os 5","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","22","20","","","US-03.2 Escrever o .gitignore (dados brutos grandes, __pycache__, .DS_Store)","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","23","20","","","US-03.3 Criar /firmware, /analise, /dados com .gitkeep","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","24","20","","","US-03.4 Escrever o esqueleto do README","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","25","20","","","US-03.5 Habilitar GitHub Pages e confirmar que uma página vazia abre","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","26","20","","","US-03.6 Fechar P-09","","","Sprint 2","Medium","mapa-ruido"
+"Story","27","","","Coordenação","US-04 Confirmar a data da feira e reancorar o cronograma","h3. Historia
+Como equipe, quero a data real da feira, para parar de planejar em cima de uma suposição que desloca 12 sprints se estiver errada.
+
+h3. Criterios de aceite
+* A data (ou a semana) da feira está confirmada por fonte oficial — coordenação, edital ou o professor
+* Se for diferente de 11–17/11/2026, Plano de Sprints e WBS e Gantt foram reancorados na mesma semana
+* O critério de avaliação está confirmado por escrito: demo ao vivo, relatório entregue e arguição oral
+* P-03 fechada
+
+h3. Rastreio
+* Origem no cofre: P-03
+* Frente: Coordenação
+* Dono: Gustavo Juks","1","Sprint 2","Medium","mapa-ruido Coordenação P-03"
+"Sub-task","28","27","","","US-04.1 Perguntar à coordenação ou ao professor a data e o formato","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","29","27","","","US-04.2 Confirmar o que pontua e com que peso","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","30","27","","","US-04.3 Se a data mudou, deslocar as sprints em Plano de Sprints","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","31","27","","","US-04.4 Atualizar a âncora em WBS e Gantt e em Progresso do Projeto","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","32","27","","","US-04.5 Fechar P-03","","","Sprint 2","Medium","mapa-ruido"
+"Story","33","","","Coordenação","US-05 Fechar as 12 datas de campo com confirmação nominal","h3. Historia
+Como equipe, quero as 12 sessões marcadas no calendário com o nome de quem vai, para descobrir agora — e não em outubro — que as 5 agendas não fecham.
+
+h3. Criterios de aceite
+* As 12 datas estão num calendário compartilhado, cada uma com os 5 nomes confirmados
+* Existem 2 datas de reserva para chuva (D-12)
+* Cada sessão tem motorista definido, ponto de encontro e horário de saída
+* Está definido quem imprime as planilhas antes de cada sessão
+* A decisão de janela horária (P-14) está refletida no horário marcado
+* P-06 fechada
+
+h3. Rastreio
+* Origem no cofre: P-06
+* Frente: Coordenação
+* Dono: Guilherme Falcão","2","Sprint 3","Medium","mapa-ruido Coordenação P-06"
+"Sub-task","34","33","","","US-05.1 Levantar a grade de aula e os compromissos fixos dos 5","","","Sprint 3","Medium","mapa-ruido"
+"Sub-task","35","33","","","US-05.2 Propor as 12 datas dentro da janela viável","","","Sprint 3","Medium","mapa-ruido"
+"Sub-task","36","33","","","US-05.3 Obter confirmação nominal de cada um, por escrito","","","Sprint 3","Medium","mapa-ruido"
+"Sub-task","37","33","","","US-05.4 Marcar as 2 datas de reserva","","","Sprint 3","Medium","mapa-ruido"
+"Sub-task","38","33","","","US-05.5 Definir motorista, ponto de encontro e horário por sessão","","","Sprint 3","Medium","mapa-ruido"
+"Sub-task","39","33","","","US-05.6 Publicar o calendário e fechar P-06","","","Sprint 3","Medium","mapa-ruido"
+"Story","40","","","Firmware / DSP","US-06 Esqueleto do firmware no Wokwi","h3. Historia
+Como equipe sem hardware na mão, quero o firmware rodando no simulador, para chegar na bancada com código pronto em vez de começar do zero quando as peças chegarem.
+
+h3. Criterios de aceite
+* O projeto Wokwi abre com ESP32 + SD + OLED SSD1306 + RTC DS3231
+* O RTC entrega data e hora formatadas
+* O OLED mostra a tela de campo: nível, ponto, tempo decorrido
+* O firmware escreve uma linha por medição no cartão e fecha o arquivo a cada escrita
+* Existe máquina de estados: ocioso → medindo → gravando → ocioso
+* O link do projeto Wokwi está no README do repositório
+
+h3. Rastreio
+* Origem no cofre: T4
+* Frente: Firmware-DSP
+* Dono: João","5","Sprint 2","High","mapa-ruido Firmware-DSP T4"
+"Sub-task","41","40","","","US-06.1 Montar o circuito no Wokwi (ver Wokwi e Firmware)","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","42","40","","","US-06.2 Ler e formatar a hora do DS3231 (I2C)","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","43","40","","","US-06.3 Desenhar a tela de campo no SSD1306","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","44","40","","","US-06.4 Escrever e ler arquivo no cartão SD (SPI, FAT32)","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","45","40","","","US-06.5 Implementar a máquina de estados da sessão","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","46","40","","","US-06.6 Tratar erro de cartão ausente sem travar o loop","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","47","40","","","US-06.7 Commitar em /firmware e linkar no README","","","Sprint 2","Medium","mapa-ruido"
+"Story","48","","","Firmware / DSP","US-07 Congelar o formato do CSV da estação","h3. Historia
+Como pipeline de dados, quero o formato do arquivo definido antes de existir dado, para não descobrir em S9 que falta uma coluna em 48 medições.
+
+h3. Criterios de aceite
+* O cabeçalho está congelado: timestamp_iso, ponto_id, sessao_id, laeq_db, lmax_db, l10_db, l90_db, amostras, temp_c, obs
+* sessao_id e ponto_id casam com os campos da planilha de Contagem Manual — é a chave que junta os dois conjuntos
+* O ponto-âncora é gravado com ponto_id reservado e reconhecível
+* Existe arquivo de exemplo commitado em /dados
+* O formato está documentado em Protocolo de Medição
+
+h3. Rastreio
+* Origem no cofre: T4
+* Frente: Firmware-DSP
+* Dono: João","2","Sprint 2","Medium","mapa-ruido Firmware-DSP T4"
+"Sub-task","49","48","","","US-07.1 Conferir o cabeçalho contra Protocolo de Medição","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","50","48","","","US-07.2 Definir o ponto_id reservado da âncora","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","51","48","","","US-07.3 Definir a convenção de sessao_id","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","52","48","","","US-07.4 Gerar um CSV de exemplo com 5 linhas e commitar","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","53","48","","","US-07.5 Registrar o formato congelado no cofre","","","Sprint 2","Medium","mapa-ruido"
+"Story","54","","","Firmware / DSP","US-08 Filtro de ponderação A no desktop","h3. Historia
+Como estação de medição, quero aplicar a ponderação A ao sinal, para produzir dB(A) e não dB puro — que é o descritor que norma e literatura usam.
+
+h3. Criterios de aceite
+* O filtro roda no desktop sobre um arquivo WAV, sem hardware
+* A resposta em frequência do filtro implementado foi comparada com a curva de ponderação A de referência
+* A diferença aceita foi definida e registrada como número, não como ""ficou parecido""
+* O código está em /analise, com o WAV de teste em /dados
+
+h3. Rastreio
+* Origem no cofre: T5
+* Frente: Firmware-DSP
+* Dono: João","5","Sprint 3","High","mapa-ruido Firmware-DSP T5"
+"Sub-task","55","54","","","US-08.1 Estudar Ponderação A e LAeq e escolher a forma de implementação","","","Sprint 3","Medium","mapa-ruido"
+"Sub-task","56","54","","","US-08.2 Implementar o filtro no desktop","","","Sprint 3","Medium","mapa-ruido"
+"Sub-task","57","54","","","US-08.3 Gerar tons puros de teste em frequências conhecidas","","","Sprint 3","Medium","mapa-ruido"
+"Sub-task","58","54","","","US-08.4 Levantar a resposta do filtro e comparar com a curva de referência","","","Sprint 3","Medium","mapa-ruido"
+"Sub-task","59","54","","","US-08.5 Registrar a tolerância aceita","","","Sprint 3","Medium","mapa-ruido"
+"Sub-task","60","54","","","US-08.6 Commitar em /analise","","","Sprint 3","Medium","mapa-ruido"
+"Story","61","","","Firmware / DSP","US-09 LAeq, Lmax, L10 e L90 validados contra WAV","h3. Historia
+Como relatório, quero os quatro descritores calculados corretamente, para poder afirmar um número em dB(A) sem que a banca o derrube.
+
+h3. Criterios de aceite
+* LAeq, Lmax, L10 e L90 são calculados a partir do sinal ponderado em A
+* A média é energética, nunca aritmética — ver o aviso em Acústica e dB(A)
+* O resultado foi comparado com uma implementação de referência sobre o mesmo WAV
+* A diferença encontrada foi anotada com o número, conforme Verificação item 2
+* O cálculo roda sobre uma janela de 10 minutos (D-11)
+
+h3. Rastreio
+* Origem no cofre: T5
+* Frente: Firmware-DSP
+* Dono: João","5","Sprint 4","High","mapa-ruido Firmware-DSP T5"
+"Sub-task","62","61","","","US-09.1 Implementar RMS e integração no tempo","","","Sprint 4","Medium","mapa-ruido"
+"Sub-task","63","61","","","US-09.2 Implementar os percentis L10 e L90","","","Sprint 4","Medium","mapa-ruido"
+"Sub-task","64","61","","","US-09.3 Conferir que a média de dB é energética","","","Sprint 4","Medium","mapa-ruido"
+"Sub-task","65","61","","","US-09.4 Rodar contra o WAV de referência e comparar","","","Sprint 4","Medium","mapa-ruido"
+"Sub-task","66","61","","","US-09.5 Anotar o número da diferença em Verificação","","","Sprint 4","Medium","mapa-ruido"
+"Sub-task","67","61","","","US-09.6 Testar com janela de 10 min","","","Sprint 4","Medium","mapa-ruido"
+"Story","68","","","Firmware / DSP","US-10 INMP441 lendo I2S com RMS estável","h3. Historia
+Como operador, quero o microfone entregando amostras reais na bancada, para saber que existe sinal antes de investir em DSP embarcado.
+
+h3. Criterios de aceite
+* O ESP32 lê amostras I2S do INMP441 sem NaN e sem valor constante
+* Teste de Verificação item 1 passa: silêncio → palma → música → silêncio, e o valor volta ao repouso
+* O RMS em silêncio é estável — oscilação em silêncio é piso de ruído ou aterramento ruim
+* A pinagem usada foi preenchida na tabela de Montagem e Ligações
+
+h3. Rastreio
+* Origem no cofre: T7
+* Frente: Firmware-DSP
+* Dono: João","5","Sprint 5","High","mapa-ruido Firmware-DSP T7"
+"Sub-task","69","68","","","US-10.1 Estudar ESP32 e I2S e conferir o pino L/R","","","Sprint 5","Medium","mapa-ruido"
+"Sub-task","70","68","","","US-10.2 Configurar o periférico I2S e imprimir amostras cruas","","","Sprint 5","Medium","mapa-ruido"
+"Sub-task","71","68","","","US-10.3 Calcular RMS por bloco e imprimir","","","Sprint 5","Medium","mapa-ruido"
+"Sub-task","72","68","","","US-10.4 Rodar o teste silêncio → palma → música → silêncio","","","Sprint 5","Medium","mapa-ruido"
+"Sub-task","73","68","","","US-10.5 Diagnosticar leitura de zeros, se ocorrer (L/R, WS/SCK trocados)","","","Sprint 5","Medium","mapa-ruido"
+"Sub-task","74","68","","","US-10.6 Preencher a pinagem em Montagem e Ligações","","","Sprint 5","Medium","mapa-ruido"
+"Story","75","","","Firmware / DSP","US-11 DSP no ESP32 gravando CSV no microSD","h3. Historia
+Como estação, quero calcular os descritores a bordo e gravar no cartão, para produzir em campo o arquivo que o pipeline espera.
+
+h3. Criterios de aceite
+* O filtro validado na US-08 roda no ESP32 sem estourar o tempo real
+* Uma medição de 10 min gera uma linha no CSV, no formato congelado da US-07
+* O OLED mostra o nível se movendo durante a medição
+* O valor a bordo bate com o cálculo do desktop sobre a mesma entrada, dentro da tolerância registrada
+
+h3. Rastreio
+* Origem no cofre: T8
+* Frente: Firmware-DSP
+* Dono: João","5","Sprint 6","High","mapa-ruido Firmware-DSP T8"
+"Sub-task","76","75","","","US-11.1 Portar o filtro de ponderação A para o ESP32","","","Sprint 6","Medium","mapa-ruido"
+"Sub-task","77","75","","","US-11.2 Integrar RMS e percentis no loop de aquisição","","","Sprint 6","Medium","mapa-ruido"
+"Sub-task","78","75","","","US-11.3 Medir o tempo de processamento por bloco e confirmar que sobra folga","","","Sprint 6","Medium","mapa-ruido"
+"Sub-task","79","75","","","US-11.4 Gravar a linha de CSV ao fim da janela de 10 min","","","Sprint 6","Medium","mapa-ruido"
+"Sub-task","80","75","","","US-11.5 Comparar o resultado a bordo com o do desktop","","","Sprint 6","Medium","mapa-ruido"
+"Sub-task","81","75","","","US-11.6 Exibir o nível ao vivo no OLED","","","Sprint 6","Medium","mapa-ruido"
+"Story","82","","","Firmware / DSP","US-12 O dado sobrevive a queda de energia","h3. Historia
+Como grupo que só tem um cartão de memória, quero garantir que puxar o cabo não corrompe o arquivo, para não perder uma sessão de campo inteira por causa de um arquivo truncado.
+
+h3. Criterios de aceite
+* A estação foi desligada na tomada no meio de uma gravação, pelo menos 3 vezes
+* O arquivo da medição anterior está íntegro e legível nas 3 vezes
+* O arquivo é fechado a cada linha escrita, não só no fim da sessão
+* O resultado foi anotado em Verificação
+
+h3. Rastreio
+* Origem no cofre: T8
+* Frente: Firmware-DSP
+* Dono: João","3","Sprint 6","Medium","mapa-ruido Firmware-DSP T8"
+"Sub-task","83","82","","","US-12.1 Garantir flush/close a cada linha gravada","","","Sprint 6","Medium","mapa-ruido"
+"Sub-task","84","82","","","US-12.2 Executar 3 desligamentos abruptos no meio da gravação","","","Sprint 6","Medium","mapa-ruido"
+"Sub-task","85","82","","","US-12.3 Abrir os arquivos e conferir integridade","","","Sprint 6","Medium","mapa-ruido"
+"Sub-task","86","82","","","US-12.4 Testar cartão ausente e cartão cheio","","","Sprint 6","Medium","mapa-ruido"
+"Sub-task","87","82","","","US-12.5 Anotar o resultado em Verificação","","","Sprint 6","Medium","mapa-ruido"
+"Story","88","","","Firmware / DSP","US-13 Modo demo: dB ao vivo via HTTP e OLED","h3. Historia
+Como visitante do stand, quero falar perto do microfone e ver o número subir, para entender em 15 segundos o que o projeto faz.
+
+h3. Criterios de aceite
+* O OLED mostra dB(A) atualizando pelo menos 2× por segundo
+* O ESP32 sobe um servidor HTTP servindo o valor atual
+* A página abre no celular pela rede local, sem instalar nada
+* A estação entra em modo demo em menos de 1 minuto desde ligar (Verificação item 8)
+* O modo demo não interfere no modo de medição
+
+h3. Rastreio
+* Origem no cofre: T19
+* Frente: Firmware-DSP
+* Dono: João","3","Sprint 9","Medium","mapa-ruido Firmware-DSP T19"
+"Sub-task","89","88","","","US-13.1 Reaproveitar o que foi aprendido no SIA-C sobre servidor HTTP no ESP32","","","Sprint 9","Medium","mapa-ruido"
+"Sub-task","90","88","","","US-13.2 Servir o valor atual numa página simples que se atualiza sozinha","","","Sprint 9","Medium","mapa-ruido"
+"Sub-task","91","88","","","US-13.3 Separar modo demo de modo medição na máquina de estados","","","Sprint 9","Medium","mapa-ruido"
+"Sub-task","92","88","","","US-13.4 Medir o tempo de boot até mostrar número","","","Sprint 9","Medium","mapa-ruido"
+"Sub-task","93","88","","","US-13.5 Testar num celular alheio","","","Sprint 9","Medium","mapa-ruido"
+"Story","94","","","Hardware / calibração","US-14 Cotação e fechamento do modelo de ESP32 e decibelímetro","h3. Historia
+Como comprador, quero preços reais em mãos, para decidir entre WROOM-32 e S3 com número, e não com preferência.
+
+h3. Criterios de aceite
+* O prompt de cotação de Lista de Componentes foi rodado e as respostas estão registradas
+* Os valores reais substituíram as estimativas em Orçamento em Camadas — *pendente da padronização do cofre*
+* P-12 decidida: WROOM-32 ou ESP32-S3 — ⚠️ deliberadamente em aberto, será discutida com o professor
+* P-13 encerrada: o decibelímetro não será comprado, por preço
+* O total cabe em R$500 — R$398 no cenário completo, desde que o decibelímetro fique de fora
+* Confirmado no datasheet do INMP441: sensibilidade e ponto de sobrecarga acústica
+* P-01 fechada
+
+h3. Rastreio
+* Origem no cofre: T2
+* Frente: Hardware-calibração
+* Dono: João
+* CONCLUIDA em 28/08/2026","3","Sprint 1","Medium","mapa-ruido Hardware-calibração T2"
+"Sub-task","95","94","","","US-14.1 Rodar o prompt de cotação de Lista de Componentes","","","Sprint 1","Medium","mapa-ruido"
+"Sub-task","96","94","","","US-14.2 Preencher os preços reais em Orçamento em Camadas","","","Sprint 1","Medium","mapa-ruido"
+"Sub-task","97","94","","","US-14.3 Comparar WROOM-32 × S3 — ⚠️ levar as duas opções ao professor (P-12)","","","Sprint 1","Medium","mapa-ruido"
+"Sub-task","98","94","","","US-14.4 Decibelímetro: descartado da compra por preço (P-13)","","","Sprint 1","Medium","mapa-ruido"
+"Sub-task","99","94","","","US-14.5 Registrar a sensibilidade do INMP441 em Calibração","","","Sprint 1","Medium","mapa-ruido"
+"Sub-task","100","94","","","US-14.6 Conferir se o total cabe em R$500 — cabe, sem o decibelímetro","","","Sprint 1","Medium","mapa-ruido"
+"Sub-task","101","94","","","US-14.7 Fechar P-01; P-13 encerrada; P-12 mantida aberta de propósito","","","Sprint 1","Medium","mapa-ruido"
+"Sub-task","102","94","","","US-14.8 Corrigir a regra de alimentação do microSD em Montagem e Ligações — é 5V/VIN, não 3V3","","","Sprint 1","Medium","mapa-ruido"
+"Story","103","","","Hardware / calibração","US-15 Compra efetivada","h3. Historia
+Como projeto, quero o pedido feito, para o relógio de 3 a 10 dias de entrega começar a correr o quanto antes.
+
+h3. Criterios de aceite
+* P-12 decidida com o professor antes de fechar o carrinho
+* O pedido foi feito em loja nacional, por um único CPF
+* O grosso do pedido foi consolidado num carrinho único no Mercado Livre Full, para zerar o frete — comprar espalhado em 6 lojas somaria >R$150 de frete
+* O cartão microSD SanDisk foi comprado na Amazon, vendido e entregue pela Amazon — falsificação de cartão corrompe log em campo
+* 2 unidades do INMP441 foram compradas — é a peça mais crítica e a mais frágil (Riscos)
+* O cabo USB é de dados e tem o conector certo para o DevKit escolhido (USB-C no S3, micro-USB no WROOM-32)
+* Nada foi comprado na UsinaInfo — a cotação alerta para atrasos superiores a 7 dias para Curitiba
+* O número de rastreio está registrado e compartilhado com o grupo
+* A data prevista de entrega está anotada em Progresso do Projeto
+* As notas fiscais foram guardadas
+
+h3. Rastreio
+* Origem no cofre: T2
+* Frente: Hardware-calibração
+* Dono: Guilherme Falcão","1","Sprint 2","Medium","mapa-ruido Hardware-calibração T2"
+"Sub-task","104","103","","","US-15.1 Fechar P-12 com o professor","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","105","103","","","US-15.2 Montar o carrinho consolidado no Mercado Livre Full","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","106","103","","","US-15.3 Comprar o cartão microSD à parte, na Amazon","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","107","103","","","US-15.4 Comprar a espuma anti-vento (Shopee ou loja de áudio)","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","108","103","","","US-15.5 Comprar e guardar todas as notas fiscais","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","109","103","","","US-15.6 Registrar rastreio e data prevista","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","110","103","","","US-15.7 Avisar o grupo e cobrar o reembolso combinado na US-02","","","Sprint 2","Medium","mapa-ruido"
+"Story","111","","","Hardware / calibração","US-16 Recebimento, inventário e montagem em protoboard","h3. Historia
+Como grupo sem experiência com ESP32 físico, quero montar um módulo por vez, para saber exatamente qual peça quebrou quando algo não funcionar.
+
+h3. Criterios de aceite
+* Todas as peças do pedido foram conferidas contra a nota e nada falta
+* A tensão 3V3 foi conferida com multímetro antes de energizar qualquer módulo
+* A ordem de Montagem e Ligações foi seguida: ESP32 → OLED → RTC → microSD → INMP441
+* Cada etapa passou antes da seguinte começar
+* O RTC mantém a hora depois de desligar e religar (teste da bateria)
+* O cartão foi formatado em FAT32 e um arquivo de teste foi escrito e lido
+* Foto da montagem tirada e commitada
+
+h3. Rastreio
+* Origem no cofre: T6
+* Frente: Hardware-calibração
+* Dono: Guilherme Conde","5","Sprint 4","High","mapa-ruido Hardware-calibração T6"
+"Sub-task","112","111","","","US-16.1 Conferir o pedido item a item contra a nota fiscal","","","Sprint 4","Medium","mapa-ruido"
+"Sub-task","113","111","","","US-16.2 Medir 3V3 e VIN com multímetro e anotar a serigrafia da placa","","","Sprint 4","Medium","mapa-ruido"
+"Sub-task","114","111","","","US-16.3 Blink só com o ESP32, com cabo de dados","","","Sprint 4","Medium","mapa-ruido"
+"Sub-task","115","111","","","US-16.4 Ligar o OLED e mostrar um ""Hello"" (I2C)","","","Sprint 4","Medium","mapa-ruido"
+"Sub-task","116","111","","","US-16.5 Ligar o RTC, acertar a hora e testar o desliga-religa","","","Sprint 4","Medium","mapa-ruido"
+"Sub-task","117","111","","","US-16.6 Ligar o microSD e escrever/ler um arquivo (FAT32)","","","Sprint 4","Medium","mapa-ruido"
+"Sub-task","118","111","","","US-16.7 Ligar o INMP441 e confirmar que chegam bits","","","Sprint 4","Medium","mapa-ruido"
+"Sub-task","119","111","","","US-16.8 Fotografar a montagem e commitar","","","Sprint 4","Medium","mapa-ruido"
+"Story","120","","","Hardware / calibração","US-17 Montagem física: caixa, windscreen e tripé","h3. Historia
+Como operador em campo, quero a estação num corpo rígido em cima do tripé, para o dado não depender de nenhum fio balançando.
+
+h3. Criterios de aceite
+* O microfone fica fora da caixa, com windscreen — microfone dentro de caixa fechada mede a caixa
+* O furo do microfone está vedado contra chuva leve sem obstruir a porta acústica do MEMS
+* Nenhum fio fica solto: tudo preso com abraçadeira ou cola quente depois de validado
+* O cartão SD é acessível sem abrir a caixa
+* O display fica visível com a caixa fechada
+* A estação fixa no tripé e chega a 1,3–1,5 m do solo
+
+h3. Rastreio
+* Origem no cofre: T10
+* Frente: Hardware-calibração
+* Dono: Guilherme Conde","3","Sprint 5","Medium","mapa-ruido Hardware-calibração T10"
+"Sub-task","121","120","","","US-17.1 Furar a caixa para microfone, cabo e visor","","","Sprint 5","Medium","mapa-ruido"
+"Sub-task","122","120","","","US-17.2 Montar o microfone externo com o windscreen","","","Sprint 5","Medium","mapa-ruido"
+"Sub-task","123","120","","","US-17.3 Vedar o furo sem tampar a porta acústica","","","Sprint 5","Medium","mapa-ruido"
+"Sub-task","124","120","","","US-17.4 Prender os fios e revalidar cada módulo depois de fechar","","","Sprint 5","Medium","mapa-ruido"
+"Sub-task","125","120","","","US-17.5 Resolver a fixação no tripé (rosca 1/4"" ou braçadeira)","","","Sprint 5","Medium","mapa-ruido"
+"Sub-task","126","120","","","US-17.6 Conferir a altura de 1,3–1,5 m","","","Sprint 5","Medium","mapa-ruido"
+"Story","127","","","Hardware / calibração","US-18 Autonomia de 3 horas no power bank","h3. Historia
+Como grupo em campo, quero saber que a bateria aguenta a sessão inteira, para não descobrir isso no terceiro ponto de uma saída de sábado.
+
+h3. Criterios de aceite
+* A estação mediu 3 horas contínuas alimentada só pelo power bank
+* Nenhum reinício e nenhum brownout no período
+* O arquivo gerado nas 3 horas está íntegro
+* O resultado foi anotado com o número em Verificação
+
+h3. Rastreio
+* Origem no cofre: T10
+* Frente: Hardware-calibração
+* Dono: Guilherme Conde","2","Sprint 6","Medium","mapa-ruido Hardware-calibração T10"
+"Sub-task","128","127","","","US-18.1 Carregar o power bank e iniciar a medição de 3h","","","Sprint 6","Medium","mapa-ruido"
+"Sub-task","129","127","","","US-18.2 Registrar quedas, reinícios e consumo aproximado","","","Sprint 6","Medium","mapa-ruido"
+"Sub-task","130","127","","","US-18.3 Abrir o arquivo e conferir a continuidade dos timestamps","","","Sprint 6","Medium","mapa-ruido"
+"Sub-task","131","127","","","US-18.4 Anotar o resultado em Verificação","","","Sprint 6","Medium","mapa-ruido"
+"Story","132","","","Hardware / calibração","US-19 Conseguir o instrumento de referência emprestado","h3. Historia
+Como responsável pela calibração, quero descobrir o quanto antes se a PUC empresta um instrumento de referência, porque não existe mais alternativa comprada se a resposta for não.
+
+h3. Criterios de aceite
+* O laboratório de física e o de engenharia da PUC foram perguntados, com nome de quem respondeu em cada um
+* A pergunta cobriu as duas possibilidades: calibrador acústico (pistonfone 94 dB @ 1 kHz) ou decibelímetro classe 2 emprestado
+* Existe resposta clara de cada um: empresta · não empresta · empresta com condição
+* Se emprestar: marca, modelo, condições e data de disponibilidade anotados em Calibração
+* Se emprestar com data marcada: a data é posterior ao fechamento da caixa e do windscreen (US-17), porque a calibração precisa ser feita com a estação montada
+* Se ninguém emprestar: a decisão de contingência foi tomada e registrada, escolhendo entre as três saídas da tabela abaixo — e não empurrada para a frente
+* P-05 fechada
+
+h3. Rastreio
+* Origem no cofre: T9
+* Frente: Hardware-calibração
+* Dono: Guilherme Conde","1","Sprint 2","Medium","mapa-ruido Hardware-calibração T9"
+"Sub-task","133","132","","","US-19.1 Identificar a quem perguntar no laboratório de física e no de engenharia","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","134","132","","","US-19.2 Perguntar por calibrador acústico / pistonfone 94 dB @ 1 kHz","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","135","132","","","US-19.3 Perguntar também por decibelímetro classe 2 emprestado","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","136","132","","","US-19.4 Perguntar ao professor se ele conhece outro caminho (contato em laboratório, empresa, outro curso)","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","137","132","","","US-19.5 Registrar cada resposta e o nome do contato em Calibração","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","138","132","","","US-19.6 Se não houver empréstimo, decidir a contingência na mesma sprint e registrar em Registro de Decisões","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","139","132","","","US-19.7 Fechar P-05","","","Sprint 2","Medium","mapa-ruido"
+"Story","140","","","Hardware / calibração","US-20 Calibração por transferência com R² > 0,95","h3. Historia
+Como trabalho acadêmico, quero a estação medindo em dB SPL absoluto, para o número ser comparável com norma e literatura em vez de ser ""o valor subiu"".
+
+h3. Criterios de aceite
+* Estação e instrumento de referência mediram simultaneamente, lado a lado, mesma altura e mesma distância da fonte
+* Foram cobertos ≥3 níveis distintos (~35, ~60 e ~75 dB(A))
+* Várias leituras por nível, usando a média
+* A regressão estação × referência é linear com R² > 0,95
+* O offset (e o ganho, se a inclinação não for 1) virou constante no firmware
+* A validação foi repetida depois de fechar a caixa e pôr o windscreen
+* As limitações de Calibração estão escritas para entrar no relatório
+
+h3. Rastreio
+* Origem no cofre: T9
+* Frente: Hardware-calibração
+* Dono: Guilherme Conde","5","Sprint 7","High","mapa-ruido Hardware-calibração T9"
+"Sub-task","141","140","","","US-20.1 Preparar os 3 ambientes de nível distinto","","","Sprint 7","Medium","mapa-ruido"
+"Sub-task","142","140","","","US-20.2 Medir simultaneamente e registrar os pares","","","Sprint 7","Medium","mapa-ruido"
+"Sub-task","143","140","","","US-20.3 Ajustar a reta e calcular o R²","","","Sprint 7","Medium","mapa-ruido"
+"Sub-task","144","140","","","US-20.4 Investigar não-linearidade, se houver (saturação, piso de ruído, posicionamento)","","","Sprint 7","Medium","mapa-ruido"
+"Sub-task","145","140","","","US-20.5 Gravar a constante de calibração no firmware","","","Sprint 7","Medium","mapa-ruido"
+"Sub-task","146","140","","","US-20.6 Repetir a validação com caixa fechada e windscreen","","","Sprint 7","Medium","mapa-ruido"
+"Sub-task","147","140","","","US-20.7 Anotar o R² obtido em Verificação","","","Sprint 7","Medium","mapa-ruido"
+"Story","148","","","Campo","US-43 Reunião de definição dos 12 pontos e da rota","h3. Historia
+Como quem vai dirigir no reconhecimento, quero os 12 pontos e a rota decididos em grupo antes de sair, para não passar o dia rodando Curitiba sem saber para onde ir.
+
+h3. Criterios de aceite
+* Os 12 pontos candidatos estão escolhidos: 6 tipologias × 2 pontos, conforme Amostra Estratificada
+* Cada candidato tem endereço de referência e coordenada aproximada, marcados num mapa compartilhado
+* As tipologias 3 e 4 estão cobertas com folga — são o par que sustenta o argumento e as últimas a sair em qualquer corte
+* O calçadão da XV está entre eles (D-10)
+* A rota está agrupada por região, para o carro não cruzar a cidade duas vezes
+* Existe pelo menos 1 candidato reserva por tipologia, para o caso de o ponto reprovar nos critérios em campo
+* A data do reconhecimento está marcada e quem dirige está definido
+* P-17 fechada
+
+h3. Rastreio
+* Origem no cofre: T3
+* Frente: Campo
+* Dono: Time inteiro","2","Sprint 2","Medium","mapa-ruido Campo T3"
+"Sub-task","149","148","","","US-43.1 Levantar candidatos por tipologia a partir de Amostra Estratificada","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","150","148","","","US-43.2 Marcar todos num mapa compartilhado, com endereço de referência","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","151","148","","","US-43.3 Conferir que as tipologias 3 e 4 estão bem cobertas","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","152","148","","","US-43.4 Escolher 1 reserva por tipologia","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","153","148","","","US-43.5 Agrupar por região e desenhar a rota do carro","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","154","148","","","US-43.6 Marcar a data do reconhecimento e definir quem dirige","","","Sprint 2","Medium","mapa-ruido"
+"Sub-task","155","148","","","US-43.7 Fechar P-17","","","Sprint 2","Medium","mapa-ruido"
+"Story","156","","","Campo","US-21 Reconhecimento e ficha dos 12 pontos","h3. Historia
+Como grupo, quero cada ponto visitado e fichado antes da primeira medição, para não improvisar posicionamento no dia e perder a comparabilidade entre pontos.
+
+h3. Criterios de aceite
+* Os 12 pontos definidos na US-43 foram visitados
+* Cada ponto passou nos 6 critérios de escolha (≥2 m de refletor, sem fonte atípica, espaço para tripé, seguro para 5 pessoas, acessível)
+* Candidato que reprovou foi substituído pelo reserva da mesma tipologia, e a troca ficou registrada
+* Cada ponto tem ficha completa: ID, tipologia, endereço, coordenada, distância à via, refletor mais próximo, foto e observações
+* A linha imaginária de contagem de cada ponto está definida por referência física (Contagem Manual)
+* As fichas e fotos estão em /dados
+
+h3. Rastreio
+* Origem no cofre: T3
+* Frente: Campo
+* Dono: Guilherme Falcão + time","4","Sprint 3","Medium","mapa-ruido Campo T3"
+"Sub-task","157","156","","","US-21.1 Visitar e aplicar os 6 critérios de Amostra Estratificada","","","Sprint 3","Medium","mapa-ruido"
+"Sub-task","158","156","","","US-21.2 Registrar coordenada pelo celular, com média de leituras","","","Sprint 3","Medium","mapa-ruido"
+"Sub-task","159","156","","","US-21.3 Medir e anotar distância à via e ao refletor mais próximo","","","Sprint 3","Medium","mapa-ruido"
+"Sub-task","160","156","","","US-21.4 Definir a linha de contagem de pedestres e veículos por ponto","","","Sprint 3","Medium","mapa-ruido"
+"Sub-task","161","156","","","US-21.5 Fotografar cada ponto e o entorno","","","Sprint 3","Medium","mapa-ruido"
+"Sub-task","162","156","","","US-21.6 Preencher as 12 fichas e commitar em /dados","","","Sprint 3","Medium","mapa-ruido"
+"Story","163","","","Campo","US-22 Ponto-âncora escolhido e registrado","h3. Historia
+Como pipeline de normalização, quero um ponto de referência fixo definido, para poder comparar uma sessão de terça com uma de sábado.
+
+h3. Criterios de aceite
+* O local é central em relação às rotas, para não custar deslocamento
+* O ruído do local é estável e previsível — nem parque silencioso, nem via expressa caótica
+* É acessível em qualquer horário e clima
+* A posição exata está marcada com foto e coordenada, para ser repetida sem dúvida
+* O ponto_id reservado da US-07 está associado a ele
+* P-04 fechada
+
+h3. Rastreio
+* Origem no cofre: T3, P-04
+* Frente: Campo
+* Dono: Guilherme Falcão","2","Sprint 4","Medium","mapa-ruido Campo T3 P-04"
+"Sub-task","164","163","","","US-22.1 Levantar 2 ou 3 candidatos pelos critérios de Amostra Estratificada","","","Sprint 4","Medium","mapa-ruido"
+"Sub-task","165","163","","","US-22.2 Medir o candidato em dois horários diferentes para checar estabilidade","","","Sprint 4","Medium","mapa-ruido"
+"Sub-task","166","163","","","US-22.3 Escolher e fotografar a posição exata","","","Sprint 4","Medium","mapa-ruido"
+"Sub-task","167","163","","","US-22.4 Registrar coordenada e associar ao ponto_id reservado","","","Sprint 4","Medium","mapa-ruido"
+"Sub-task","168","163","","","US-22.5 Fechar P-04","","","Sprint 4","Medium","mapa-ruido"
+"Story","169","","","Campo","US-23 Coleta piloto: o ciclo inteiro em 1 ponto","h3. Historia
+Como grupo, quero levar um único ponto do microfone até o mapa, para descobrir com 1 medição o que custaria refazer com 48.
+
+h3. Criterios de aceite
+* Sessão completa com âncora no início e no fim
+* Medição de 10 min com os 5 papéis ocupados e não acumulados
+* Planilha de contagem preenchida e foto do ponto tirada
+* CSV copiado do cartão no mesmo dia
+* O dado atravessou até aparecer num mapa, sem intervenção manual improvisada
+* Tudo que deu errado ficou anotado, mesmo o que já foi resolvido
+
+h3. Rastreio
+* Origem no cofre: T11
+* Frente: Campo
+* Dono: Time inteiro","3","Sprint 7","Medium","mapa-ruido Campo T11"
+"Sub-task","170","169","","","US-23.1 Rodar a checklist ""antes de sair"" de Protocolo de Medição","","","Sprint 7","Medium","mapa-ruido"
+"Sub-task","171","169","","","US-23.2 Medir a âncora, o ponto e a âncora de novo","","","Sprint 7","Medium","mapa-ruido"
+"Sub-task","172","169","","","US-23.3 Executar a contagem manual na mesma janela de 10 min","","","Sprint 7","Medium","mapa-ruido"
+"Sub-task","173","169","","","US-23.4 Copiar o CSV e digitalizar a planilha no mesmo dia","","","Sprint 7","Medium","mapa-ruido"
+"Sub-task","174","169","","","US-23.5 Passar o dado pelo pipeline até um mapa","","","Sprint 7","Medium","mapa-ruido"
+"Sub-task","175","169","","","US-23.6 Anotar cada atrito encontrado","","","Sprint 7","Medium","mapa-ruido"
+"Story","176","","","Campo","US-24 Ajustes pós-piloto no protocolo e no firmware","h3. Historia
+Como grupo prestes a fazer 12 sessões, quero corrigir o que o piloto revelou, para não repetir o mesmo erro 12 vezes.
+
+h3. Criterios de aceite
+* Cada atrito anotado na US-23 tem destino: corrigido · aceito · vira limitação
+* Se o CSV mudou, a mudança está refletida no formato congelado e no pipeline
+* O tempo real da sessão foi medido e a quantidade de pontos por sessão foi ajustada ao que cabe
+* Protocolo de Medição foi atualizado com o que mudou
+* Qualquer decisão nova está em Registro de Decisões
+
+h3. Rastreio
+* Origem no cofre: T12
+* Frente: Campo
+* Dono: Time inteiro","3","Sprint 8","Medium","mapa-ruido Campo T12"
+"Sub-task","177","176","","","US-24.1 Revisar a lista de atritos do piloto com os 5","","","Sprint 8","Medium","mapa-ruido"
+"Sub-task","178","176","","","US-24.2 Corrigir o firmware, se necessário","","","Sprint 8","Medium","mapa-ruido"
+"Sub-task","179","176","","","US-24.3 Ajustar a planilha de contagem, se necessário","","","Sprint 8","Medium","mapa-ruido"
+"Sub-task","180","176","","","US-24.4 Recalcular quantos pontos cabem numa sessão real","","","Sprint 8","Medium","mapa-ruido"
+"Sub-task","181","176","","","US-24.5 Atualizar Protocolo de Medição e Registro de Decisões","","","Sprint 8","Medium","mapa-ruido"
+"Story","182","","","Campo","US-25 Executar as 12 sessões de campo","h3. Historia
+Como conjunto de dados, quero as 48 medições e as contagens correspondentes, para que exista o que analisar.
+
+h3. Criterios de aceite
+
+h3. Rastreio
+* Origem no cofre: T13
+* Frente: Campo
+* Dono: Time inteiro","","Sprint 8","Medium","mapa-ruido Campo T13"
+"Sub-task","183","182","","","US-25.1 a US-25.12 — sessões 1 a 12, cada uma com a checklist completa de Protocolo de Medição","","","Sprint 8","Medium","mapa-ruido"
+"Sub-task","184","182","","","US-25.2 e US-25.R2 — sessões de reserva para chuva","","","Sprint 8","Medium","mapa-ruido"
+"Sub-task","185","182","","","US-25.3 Conferir a cobertura final: 12 pontos × 2 janelas × 2 repetições","","","Sprint 8","Medium","mapa-ruido"
+"Story","186","","","Campo","US-26 Kit de sessão e distribuição de papéis","h3. Historia
+Como escriba, quero o material pronto antes de cada saída, para a sessão não falhar por falta de uma folha impressa.
+
+h3. Criterios de aceite
+* A planilha de campo de Contagem Manual está diagramada e pronta para imprimir
+* Existe uma folha por ponto por sessão
+* O kit físico está montado: tripé, planilhas, canetas, cronômetro, windscreen reserva, cabo USB reserva
+* A escala de papéis está definida, com rodízio entre sessões
+* Está escrito e comunicado que o operador não conta (Contagem Manual)
+
+h3. Rastreio
+* Origem no cofre: T13
+* Frente: Campo
+* Dono: Guilherme Falcão","2","Sprint 7","Medium","mapa-ruido Campo T13"
+"Sub-task","187","186","","","US-26.1 Diagramar a planilha de campo em uma página","","","Sprint 7","Medium","mapa-ruido"
+"Sub-task","188","186","","","US-26.2 Imprimir o lote das primeiras sessões","","","Sprint 7","Medium","mapa-ruido"
+"Sub-task","189","186","","","US-26.3 Montar o kit físico numa mochila só","","","Sprint 7","Medium","mapa-ruido"
+"Sub-task","190","186","","","US-26.4 Definir a escala de rodízio dos 5 papéis","","","Sprint 7","Medium","mapa-ruido"
+"Sub-task","191","186","","","US-26.5 Fazer um ensaio de 10 min de contagem, para calibrar o ritmo","","","Sprint 7","Medium","mapa-ruido"
+"Story","192","","","Dados / mapa","US-27 Digitalizar as planilhas no mesmo dia","h3. Historia
+Como análise de correlação, quero as contagens em planilha digital, para que exista o outro lado do teste da hipótese.
+
+h3. Criterios de aceite
+* As folhas são fotografadas antes de digitar — papel se perde, foto no celular não
+* A digitação acontece no mesmo dia da coleta
+* Uma linha por ponto por sessão, numa planilha única
+* sessao_id e ponto_id batem exatamente com o CSV da estação
+* Conferência cruzada: quem digita não é quem contou
+* A planilha está em /dados
+
+h3. Rastreio
+* Origem no cofre: T14
+* Frente: Dados-mapa
+* Dono: Guilherme Falcão","3","Sprint 8","Medium","mapa-ruido Dados-mapa T14"
+"Sub-task","193","192","","","US-27.1 Criar a planilha única com as colunas de Contagem Manual","","","Sprint 8","Medium","mapa-ruido"
+"Sub-task","194","192","","","US-27.2 Fotografar as folhas de cada sessão","","","Sprint 8","Medium","mapa-ruido"
+"Sub-task","195","192","","","US-27.3 Digitar no mesmo dia","","","Sprint 8","Medium","mapa-ruido"
+"Sub-task","196","192","","","US-27.4 Fazer a conferência cruzada","","","Sprint 8","Medium","mapa-ruido"
+"Sub-task","197","192","","","US-27.5 Commitar em /dados a cada sessão","","","Sprint 8","Medium","mapa-ruido"
+"Story","198","","","Dados / mapa","US-28 Pipeline: leitura, limpeza e descarte de sessão inválida","h3. Historia
+Como analista, quero os CSVs de todas as sessões lidos e limpos, para trabalhar sobre um conjunto em que confio.
+
+h3. Criterios de aceite
+* O pipeline lê todos os CSVs de /dados e junta com a planilha de contagem por sessao_id + ponto_id
+* Sessões marcadas como inválidas (chuva, protocolo quebrado) são descartadas explicitamente, com o motivo registrado
+* Outliers são sinalizados e investigados, nunca apagados em silêncio
+* Toda linha descartada aparece num relatório de limpeza, com contagem
+* Roda com os dados das primeiras sessões, sem esperar as 12
+
+h3. Rastreio
+* Origem no cofre: T15
+* Frente: Dados-mapa
+* Dono: Arthur","5","Sprint 9","High","mapa-ruido Dados-mapa T15"
+"Sub-task","199","198","","","US-28.1 Ler e concatenar os CSVs de sessão","","","Sprint 9","Medium","mapa-ruido"
+"Sub-task","200","198","","","US-28.2 Fazer o join com a planilha de contagem manual","","","Sprint 9","Medium","mapa-ruido"
+"Sub-task","201","198","","","US-28.3 Detectar chave órfã (medição sem contagem, e vice-versa)","","","Sprint 9","Medium","mapa-ruido"
+"Sub-task","202","198","","","US-28.4 Implementar o descarte de sessão inválida com motivo","","","Sprint 9","Medium","mapa-ruido"
+"Sub-task","203","198","","","US-28.5 Sinalizar outliers e cruzar com o campo de ocorrências do escriba","","","Sprint 9","Medium","mapa-ruido"
+"Sub-task","204","198","","","US-28.6 Emitir o relatório de limpeza","","","Sprint 9","Medium","mapa-ruido"
+"Story","205","","","Dados / mapa","US-29 Normalização pela deriva do ponto-âncora","h3. Historia
+Como mapa, quero as sessões corrigidas pela deriva medida na âncora, para que a diferença entre dois pontos seja lugar, e não horário.
+
+h3. Criterios de aceite
+* Para cada sessão, a diferença entre a âncora inicial e a final é calculada
+* A correção é aplicada aos pontos daquela sessão
+* A conta respeita a natureza logarítmica do dB — média energética, não aritmética
+* A fórmula está escrita em prosa em Python para Análise Geoespacial, pronta para o relatório
+* Existe um antes/depois mostrando o efeito da normalização em pelo menos uma sessão
+* Sessão sem âncora é rejeitada pelo pipeline, não estimada
+
+h3. Rastreio
+* Origem no cofre: T15
+* Frente: Dados-mapa
+* Dono: Arthur","5","Sprint 9","High","mapa-ruido Dados-mapa T15"
+"Sub-task","206","205","","","US-29.1 Extrair as duas leituras de âncora por sessão","","","Sprint 9","Medium","mapa-ruido"
+"Sub-task","207","205","","","US-29.2 Definir e implementar a fórmula de correção","","","Sprint 9","Medium","mapa-ruido"
+"Sub-task","208","205","","","US-29.3 Garantir que a média de dB é energética","","","Sprint 9","Medium","mapa-ruido"
+"Sub-task","209","205","","","US-29.4 Rejeitar sessão sem âncora com erro claro","","","Sprint 9","Medium","mapa-ruido"
+"Sub-task","210","205","","","US-29.5 Gerar o comparativo antes/depois","","","Sprint 9","Medium","mapa-ruido"
+"Sub-task","211","205","","","US-29.6 Escrever a justificativa da fórmula no cofre","","","Sprint 9","Medium","mapa-ruido"
+"Story","212","","","Dados / mapa","US-30 Agregação por ponto e por tipologia","h3. Historia
+Como mapa e como relatório, quero um valor por ponto e um por tipologia, para poder desenhar o marcador e comparar as 6 tipologias entre si.
+
+h3. Criterios de aceite
+* Cada um dos 12 pontos tem LAeq, Lmax, L10 e L90 agregados das repetições
+* A agregação é feita por janela horária também, não só no total
+* Existe o agregado por tipologia, com dispersão entre os 2 pontos de cada uma
+* O número de medições que sustenta cada agregado aparece junto do valor
+* A saída é um CSV único que alimenta o mapa e a análise
+
+h3. Rastreio
+* Origem no cofre: T15
+* Frente: Dados-mapa
+* Dono: Arthur","3","Sprint 10","Medium","mapa-ruido Dados-mapa T15"
+"Sub-task","213","212","","","US-30.1 Agregar por ponto, respeitando média energética","","","Sprint 10","Medium","mapa-ruido"
+"Sub-task","214","212","","","US-30.2 Agregar por ponto × janela horária","","","Sprint 10","Medium","mapa-ruido"
+"Sub-task","215","212","","","US-30.3 Agregar por tipologia com medida de dispersão","","","Sprint 10","Medium","mapa-ruido"
+"Sub-task","216","212","","","US-30.4 Anexar o N de cada agregado","","","Sprint 10","Medium","mapa-ruido"
+"Sub-task","217","212","","","US-30.5 Exportar o CSV agregado para /dados","","","Sprint 10","Medium","mapa-ruido"
+"Story","218","","","Dados / mapa","US-31 GTFS da URBS cruzado com os 12 pontos","h3. Historia
+Como argumento do trabalho, quero saber quantas linhas e paradas de ônibus existem perto de cada ponto, para que o mapa de ruído converse com a pergunta original do professor.
+
+h3. Criterios de aceite
+* O feed GTFS da URBS foi baixado, com data de download e licença registradas — vai no relatório
+* Para cada um dos 12 pontos existe a contagem de paradas e de linhas num raio definido e declarado
+* O raio escolhido está justificado, não é arbitrário
+* A camada de rede está pronta para entrar no mapa da US-33
+* Se o feed não estiver disponível, isso está registrado como limitação, não escondido
+
+h3. Rastreio
+* Origem no cofre: T16
+* Frente: Dados-mapa
+* Dono: Arthur","3","Sprint 8","Medium","mapa-ruido Dados-mapa T16"
+"Sub-task","219","218","","","US-31.1 Localizar e baixar o feed GTFS atual da URBS","","","Sprint 8","Medium","mapa-ruido"
+"Sub-task","220","218","","","US-31.2 Registrar data de download, endereço e licença","","","Sprint 8","Medium","mapa-ruido"
+"Sub-task","221","218","","","US-31.3 Carregar stops e routes e projetar corretamente","","","Sprint 8","Medium","mapa-ruido"
+"Sub-task","222","218","","","US-31.4 Definir e justificar o raio de vizinhança","","","Sprint 8","Medium","mapa-ruido"
+"Sub-task","223","218","","","US-31.5 Contar paradas e linhas por ponto","","","Sprint 8","Medium","mapa-ruido"
+"Sub-task","224","218","","","US-31.6 Exportar a camada para o mapa","","","Sprint 8","Medium","mapa-ruido"
+"Story","225","","","Dados / mapa","US-32 Correlação LAeq × pedestres × veículos × ônibus","h3. Historia
+Como pesquisa, quero o teste explícito da hipótese do proxy, para poder afirmar com número se ruído estima demanda ou não.
+
+h3. Criterios de aceite
+* As três correlações estão calculadas: LAeq × veículos, LAeq × ônibus, LAeq × pedestres
+* Cada uma vem com coeficiente, R² e o N que a sustenta
+* As medições extrapoladas (sub-janela de 2 min) estão marcadas e o efeito de incluí-las ou não foi verificado
+* O ponto do calçadão da XV aparece identificado no gráfico — é o outlier que carrega o argumento
+* Existe um gráfico principal, pronto para o pôster e para o stand
+* A conclusão está escrita em uma frase, sem hedge
+
+h3. Rastreio
+* Origem no cofre: T17
+* Frente: Dados-mapa
+* Dono: Arthur","5","Sprint 10","High","mapa-ruido Dados-mapa T17"
+"Sub-task","226","225","","","US-32.1 Montar a tabela ponto × LAeq × contagens","","","Sprint 10","Medium","mapa-ruido"
+"Sub-task","227","225","","","US-32.2 Calcular as três correlações com R² e N","","","Sprint 10","Medium","mapa-ruido"
+"Sub-task","228","225","","","US-32.3 Testar a sensibilidade aos dados extrapolados","","","Sprint 10","Medium","mapa-ruido"
+"Sub-task","229","225","","","US-32.4 Gerar o gráfico principal com a XV destacada","","","Sprint 10","Medium","mapa-ruido"
+"Sub-task","230","225","","","US-32.5 Escrever a conclusão em uma frase","","","Sprint 10","Medium","mapa-ruido"
+"Sub-task","231","225","","","US-32.6 Conferir a interpretação contra A Hipótese em Teste","","","Sprint 10","Medium","mapa-ruido"
+"Story","232","","","Dados / mapa","US-33 Mapa web publicado no GitHub Pages","h3. Historia
+Como visitante do stand, quero abrir o mapa e ver os 12 pontos, para explorar o resultado por conta própria.
+
+h3. Criterios de aceite
+* Os 12 pontos aparecem com marcador graduado por LAeq
+* O popup de cada ponto traz tipologia, LAeq, Lmax, L10, L90, contagens e a foto
+* A camada de transporte público da US-31 está presente e pode ser ligada/desligada
+* O mapa está publicado e o endereço abre de fora da máquina de quem fez
+* O QR code do repositório e do mapa foi gerado e testado
+
+h3. Rastreio
+* Origem no cofre: T18
+* Frente: Dados-mapa
+* Dono: Arthur","5","Sprint 11","High","mapa-ruido Dados-mapa T18"
+"Sub-task","233","232","","","US-33.1 Montar o mapa com marcadores graduados","","","Sprint 11","Medium","mapa-ruido"
+"Sub-task","234","232","","","US-33.2 Montar o popup com dados e foto","","","Sprint 11","Medium","mapa-ruido"
+"Sub-task","235","232","","","US-33.3 Adicionar a camada GTFS como camada alternável","","","Sprint 11","Medium","mapa-ruido"
+"Sub-task","236","232","","","US-33.4 Publicar no GitHub Pages","","","Sprint 11","Medium","mapa-ruido"
+"Sub-task","237","232","","","US-33.5 Gerar e testar o QR code","","","Sprint 11","Medium","mapa-ruido"
+"Sub-task","238","232","","","US-33.6 Abrir o endereço de outra máquina para confirmar","","","Sprint 11","Medium","mapa-ruido"
+"Story","239","","","Dados / mapa","US-34 O mapa abre no celular, em rede móvel","h3. Historia
+Como pessoa no corredor da feira, quero abrir o mapa no meu celular, para levar o trabalho embora sem depender do WiFi do evento.
+
+h3. Criterios de aceite
+* O mapa foi aberto num celular, em rede móvel, fora de casa
+* Carrega em tempo razoável e é navegável com o dedo
+* As fotos dos popups estão comprimidas o bastante para não travar o carregamento
+* O QR code leva direto ao mapa, testado por alguém de fora do grupo
+
+h3. Rastreio
+* Origem no cofre: T18
+* Frente: Dados-mapa
+* Dono: Arthur","2","Sprint 12","Medium","mapa-ruido Dados-mapa T18"
+"Sub-task","240","239","","","US-34.1 Comprimir as fotos dos popups","","","Sprint 12","Medium","mapa-ruido"
+"Sub-task","241","239","","","US-34.2 Medir o tempo de carregamento em rede móvel","","","Sprint 12","Medium","mapa-ruido"
+"Sub-task","242","239","","","US-34.3 Testar a navegação por toque","","","Sprint 12","Medium","mapa-ruido"
+"Sub-task","243","239","","","US-34.4 Pedir a alguém de fora para abrir pelo QR code","","","Sprint 12","Medium","mapa-ruido"
+"Story","244","","","Dados / mapa","US-35 Dataset aberto com dicionário de dados","h3. Historia
+Como avaliador, quero baixar os dados e entender cada coluna, para verificar o que o grupo afirma.
+
+h3. Criterios de aceite
+* /dados traz o CSV bruto da estação, a planilha de contagem digitalizada, as fichas dos 12 pontos e o CSV agregado
+* Existe dicionário de dados: cada coluna com nome, unidade e significado
+* As fotos dos pontos estão no repositório e referenciadas pelas fichas
+* Está declarado o que foi descartado e por quê
+* A licença dos dados está declarada
+
+h3. Rastreio
+* Origem no cofre: Entregavel-4
+* Frente: Dados-mapa
+* Dono: Gustavo Juks","2","Sprint 11","Medium","mapa-ruido Dados-mapa Entregavel-4"
+"Sub-task","245","244","","","US-35.1 Organizar /dados em bruto, intermediário e agregado","","","Sprint 11","Medium","mapa-ruido"
+"Sub-task","246","244","","","US-35.2 Escrever o dicionário de dados","","","Sprint 11","Medium","mapa-ruido"
+"Sub-task","247","244","","","US-35.3 Publicar o relatório de limpeza da US-28","","","Sprint 11","Medium","mapa-ruido"
+"Sub-task","248","244","","","US-35.4 Declarar a licença","","","Sprint 11","Medium","mapa-ruido"
+"Story","249","","","Escrita / apresentação","US-36 NBR 10151 e a fonte primária da OMS","h3. Historia
+Como relatório, quero as referências normativas conferidas na fonte, para não ter um número errado atribuído a uma norma derrubando a credibilidade do trabalho inteiro.
+
+h3. Criterios de aceite
+* A biblioteca da PUCPR foi consultada sobre acesso ao acervo ABNT (Target GEDWeb ou equivalente)
+* Existe resposta: há acesso · não há acesso
+* Se houver: a versão vigente foi identificada e o que será citado foi lido no texto oficial
+* Se não houver: fica registrado que a norma é citada só como referência, sem reproduzir limites
+* A afirmação da OMS sobre exposição noturna foi rastreada até a publicação original, com o número e o contexto conferidos — ou foi retirada
+* P-10 e P-11 fechadas
+
+h3. Rastreio
+* Origem no cofre: P-10, P-11
+* Frente: Escrita-apresentação
+* Dono: Gustavo Juks","2","Sprint 5","Medium","mapa-ruido Escrita-apresentação P-10 P-11"
+"Sub-task","250","249","","","US-36.1 Perguntar à biblioteca sobre acesso ao acervo ABNT","","","Sprint 5","Medium","mapa-ruido"
+"Sub-task","251","249","","","US-36.2 Identificar a versão vigente da NBR 10151 no catálogo","","","Sprint 5","Medium","mapa-ruido"
+"Sub-task","252","249","","","US-36.3 Ler o que será citado e anotar em NBR 10151 e Normas","","","Sprint 5","Medium","mapa-ruido"
+"Sub-task","253","249","","","US-36.4 Localizar a publicação original da diretriz da OMS","","","Sprint 5","Medium","mapa-ruido"
+"Sub-task","254","249","","","US-36.5 Conferir número e contexto, ou retirar a afirmação","","","Sprint 5","Medium","mapa-ruido"
+"Sub-task","255","249","","","US-36.6 Fechar P-10 e P-11","","","Sprint 5","Medium","mapa-ruido"
+"Story","256","","","Escrita / apresentação","US-37 Relatório: problema, hipótese e metodologia","h3. Historia
+Como grupo, quero a metade do relatório que não depende de resultado escrita antes dos resultados existirem, para não escrever 20 páginas na última semana.
+
+h3. Criterios de aceite
+* Seção 1 escrita: problema e a hipótese original do professor
+* Seção 2 escrita: por que a hipótese precisa ser testada, com o argumento do calçadão da XV
+* Seção 3 escrita: metodologia — estação, calibração por transferência, protocolo, amostra estratificada
+* A fórmula de normalização por âncora está explicada em prosa
+* As referências da US-36 estão citadas corretamente
+* O texto foi lido por alguém do grupo que não escreveu
+
+h3. Rastreio
+* Origem no cofre: T20
+* Frente: Escrita-apresentação
+* Dono: Gustavo Juks","5","Sprint 7","High","mapa-ruido Escrita-apresentação T20"
+"Sub-task","257","256","","","US-37.1 Escrever problema e hipótese original","","","Sprint 7","Medium","mapa-ruido"
+"Sub-task","258","256","","","US-37.2 Escrever o argumento de por que testar, a partir de A Hipótese em Teste","","","Sprint 7","Medium","mapa-ruido"
+"Sub-task","259","256","","","US-37.3 Escrever a metodologia a partir de Protocolo de Medição e Amostra Estratificada","","","Sprint 7","Medium","mapa-ruido"
+"Sub-task","260","256","","","US-37.4 Escrever a seção de calibração a partir de Calibração","","","Sprint 7","Medium","mapa-ruido"
+"Sub-task","261","256","","","US-37.5 Explicar a normalização por âncora","","","Sprint 7","Medium","mapa-ruido"
+"Sub-task","262","256","","","US-37.6 Revisão cruzada por outro membro","","","Sprint 7","Medium","mapa-ruido"
+"Story","263","","","Escrita / apresentação","US-38 Relatório: resultados, discussão e limitações","h3. Historia
+Como banca, quero ver o resultado, o que ele significa e o que o trabalho não sustenta, para avaliar maturidade e não só esforço.
+
+h3. Criterios de aceite
+* Seção 4: resultados — o mapa e as três correlações, com R² e N
+* Seção 5: discussão — o que o proxy explica e o que não explica
+* Seção 6: limitações, cobrindo as quatro de Calibração mais as do desenho amostral
+* Está escrito que 12 pontos não sustentam interpolação espacial — o mapa é de pontos, não de superfície
+* Está escrito que recomendação real de alocação de linhas exigiria dados de demanda da URBS que o grupo não tem
+* Se a janela horária mudou (P-14), isso aparece como limitação
+* Seção 7: trabalhos futuros
+
+h3. Rastreio
+* Origem no cofre: T20
+* Frente: Escrita-apresentação
+* Dono: Gustavo Juks","5","Sprint 11","High","mapa-ruido Escrita-apresentação T20"
+"Sub-task","264","263","","","US-38.1 Escrever os resultados a partir da US-32","","","Sprint 11","Medium","mapa-ruido"
+"Sub-task","265","263","","","US-38.2 Escrever a discussão do proxy","","","Sprint 11","Medium","mapa-ruido"
+"Sub-task","266","263","","","US-38.3 Escrever as limitações de calibração","","","Sprint 11","Medium","mapa-ruido"
+"Sub-task","267","263","","","US-38.4 Escrever as limitações do desenho amostral","","","Sprint 11","Medium","mapa-ruido"
+"Sub-task","268","263","","","US-38.5 Escrever trabalhos futuros","","","Sprint 11","Medium","mapa-ruido"
+"Sub-task","269","263","","","US-38.6 Revisão final e formatação de entrega","","","Sprint 11","Medium","mapa-ruido"
+"Story","270","","","Escrita / apresentação","US-39 Pôster do stand","h3. Historia
+Como stand, quero um pôster que carregue o argumento sozinho, para o trabalho comunicar mesmo quando o hardware falhar e ninguém estiver livre para falar.
+
+h3. Criterios de aceite
+* O gráfico principal da US-32 é o elemento central, legível a 2 metros
+* A frase que a pessoa tem que levar embora está no pôster, em destaque
+* Há foto da estação montada e da montagem interna
+* Há QR code do repositório e do mapa
+* Impresso com 3 dias de antecedência, não na véspera (Roteiro da Feira)
+
+h3. Rastreio
+* Origem no cofre: T20
+* Frente: Escrita-apresentação
+* Dono: Gustavo Juks","3","Sprint 12","Medium","mapa-ruido Escrita-apresentação T20"
+"Sub-task","271","270","","","US-39.1 Definir o layout e a frase de destaque","","","Sprint 12","Medium","mapa-ruido"
+"Sub-task","272","270","","","US-39.2 Montar o gráfico principal em tamanho de pôster","","","Sprint 12","Medium","mapa-ruido"
+"Sub-task","273","270","","","US-39.3 Selecionar as fotos","","","Sprint 12","Medium","mapa-ruido"
+"Sub-task","274","270","","","US-39.4 Inserir os QR codes e testá-los impressos","","","Sprint 12","Medium","mapa-ruido"
+"Sub-task","275","270","","","US-39.5 Enviar para impressão com 3 dias de folga","","","Sprint 12","Medium","mapa-ruido"
+"Story","276","","","Escrita / apresentação","US-40 Roteiro do pitch de 2 minutos","h3. Historia
+Como qualquer um dos 5, quero saber dar o pitch, para não depender de o ""apresentador oficial"" estar livre quando alguém chegar no stand.
+
+h3. Criterios de aceite
+* O roteiro de 6 passos de Roteiro da Feira está escrito e impresso
+* A tabela de perguntas prováveis e respostas curtas está com o grupo
+* Os 5 conseguem dar o pitch — não só um
+* Alguém explica o argumento do calçadão da XV em menos de 2 minutos
+* Está definida a escala de quem fica no stand em cada horário
+
+h3. Rastreio
+* Origem no cofre: T20
+* Frente: Escrita-apresentação
+* Dono: Gustavo Juks","2","Sprint 12","Medium","mapa-ruido Escrita-apresentação T20"
+"Sub-task","277","276","","","US-40.1 Escrever o roteiro dos 6 passos","","","Sprint 12","Medium","mapa-ruido"
+"Sub-task","278","276","","","US-40.2 Revisar as respostas às perguntas prováveis","","","Sprint 12","Medium","mapa-ruido"
+"Sub-task","279","276","","","US-40.3 Cada um treina o pitch uma vez, cronometrado","","","Sprint 12","Medium","mapa-ruido"
+"Sub-task","280","276","","","US-40.4 Montar a escala do stand","","","Sprint 12","Medium","mapa-ruido"
+"Story","281","","","Escrita / apresentação","US-41 Vídeo plano B da demo","h3. Historia
+Como stand, quero um vídeo da estação funcionando, para nunca ficar sem demonstração quando a bateria acabar ou alguém esbarrar na mesa.
+
+h3. Criterios de aceite
+* O vídeo mostra a estação ligando, medindo e o número reagindo a som
+* Dura menos de 60 segundos
+* Está no celular de pelo menos duas pessoas do grupo, offline
+* Foi gravado antes do dia da feira, não no dia
+* Também está no repositório
+
+h3. Rastreio
+* Origem no cofre: T21
+* Frente: Escrita-apresentação
+* Dono: João","2","Sprint 12","Medium","mapa-ruido Escrita-apresentação T21"
+"Sub-task","282","281","","","US-41.1 Roteirizar as tomadas","","","Sprint 12","Medium","mapa-ruido"
+"Sub-task","283","281","","","US-41.2 Gravar com a estação já calibrada e montada","","","Sprint 12","Medium","mapa-ruido"
+"Sub-task","284","281","","","US-41.3 Editar para menos de 60 s","","","Sprint 12","Medium","mapa-ruido"
+"Sub-task","285","281","","","US-41.4 Copiar para 2 celulares e para o repositório","","","Sprint 12","Medium","mapa-ruido"
+"Story","286","","","Escrita / apresentação","US-42 Ensaio do stand com alguém de fora","h3. Historia
+Como grupo, quero ensaiar com uma pessoa que não conhece o projeto, para descobrir o que não está claro antes de descobrir na banca.
+
+h3. Criterios de aceite
+* Ensaio completo com a demo ligada e alguém de fora assistindo
+* A estação liga e mostra número em menos de 1 minuto
+* O mapa abre
+* A pessoa de fora consegue repetir a ideia principal com as próprias palavras
+* O vídeo plano B está em 2 celulares
+* Cabo reserva e power bank carregado estão na mochila
+* A checklist do dia de Roteiro da Feira foi percorrida inteira
+
+h3. Rastreio
+* Origem no cofre: T21
+* Frente: Escrita-apresentação
+* Dono: Time inteiro","3","Sprint 12","Medium","mapa-ruido Escrita-apresentação T21"
+"Sub-task","287","286","","","US-42.1 Montar o stand completo em casa ou na sala","","","Sprint 12","Medium","mapa-ruido"
+"Sub-task","288","286","","","US-42.2 Rodar o pitch para a pessoa de fora","","","Sprint 12","Medium","mapa-ruido"
+"Sub-task","289","286","","","US-42.3 Cronometrar o boot da estação","","","Sprint 12","Medium","mapa-ruido"
+"Sub-task","290","286","","","US-42.4 Perguntar à pessoa o que ela entendeu, e corrigir o que não passou","","","Sprint 12","Medium","mapa-ruido"
+"Sub-task","291","286","","","US-42.5 Percorrer a checklist do dia","","","Sprint 12","Medium","mapa-ruido"
+"Sub-task","292","286","","","US-42.6 Preparar a mochila com reservas","","","Sprint 12","Medium","mapa-ruido"
