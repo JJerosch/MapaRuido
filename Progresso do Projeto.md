@@ -1,79 +1,52 @@
 # 📌 Progresso do Projeto — Mapa de Ruído de Curitiba
 
-> [!abstract] Leia isto primeiro
-> Esta é a **foto do "onde estamos agora"**. O [[00 - Índice]] diz *o que existe no cofre*; **este arquivo diz o que já foi feito e qual é o próximo passo.**
+> [!abstract] Foto do "Onde estamos agora"
+> O [[00 - Índice]] mostra o mapa completo da documentação. Este arquivo indica o estado atual e o próximo passo imediato.
 
-**Última atualização:** 2026-08-26
-**Fase atual:** Escopo reformulado e aprovado → **prestes a comprar hardware (T2)**
-**Nenhuma peça comprada, nenhuma linha de firmware escrita.**
+**Fase atual:** Simulação Wokwi & Firmware Base Concluídos → **Próximo: Compra Centralizada do Hardware (T2)**
 
 ---
 
 ## 🎯 Onde estamos, em uma frase
-
-O escopo foi **reformulado e fechado** (metodologia híbrida A+B, pontos fixos, 1 estação, 12 pontos, feira em novembro). O próximo passo concreto é **fechar a lista de componentes e comprar** — é o início do caminho crítico, e todo dia de atraso aqui empurra o projeto inteiro.
-
----
-
-## ✅ FASE 0 — Definição de escopo (CONCLUÍDA)
-
-- [x] Análise crítica da proposta original do professor → `Plano/_Histórico/`
-- [x] Premissa "ruído = demanda por ônibus" identificada como frágil → [[A Hipótese em Teste]]
-- [x] Método de coleta definido: **pontos fixos**, não medição veicular → [[Registro de Decisões|D-02]]
-- [x] Metodologia definida: **híbrido A+B** (mapa é o produto, proxy é testado) → [[Escopo Reformulado]]
-- [x] Amostra desenhada: 6 tipologias × 2 pontos = 12 pontos → [[Amostra Estratificada]]
-- [x] Protocolo de medição definido, com ponto-âncora → [[Protocolo de Medição]]
-- [x] Divisão de papéis em campo definida → [[Contagem Manual]]
-- [x] Hardware especificado, com RTC no lugar do GPS → [[Lista de Componentes]]
-- [x] Orçamento em camadas montado (~R$500) → [[Orçamento em Camadas]]
-- [x] WBS de 21 tarefas com dependências e caminho crítico → [[WBS e Gantt]]
-- [x] Riscos mapeados com mitigação → [[Riscos]]
-- [x] Cofre Obsidian criado como memória viva → [[Como usar este cofre]]
+O escopo, a metodologia de 12 pontos e a lista oficial de componentes super econômica (~R$ 212 total / ~R$ 42,40 por membro) estão fechados e documentados. O **firmware base do ESP32 com auto-teste e WebServer já foi montado e testado no Wokwi**. O próximo passo é **realizar a compra física dos componentes**.
 
 ---
 
-## 🔜 FASE 1 — Compra e bancada (A FAZER — próximo passo)
-
-- [ ] **T1 — Alinhar reformulação com o professor** ⭐ *(faça antes de comprar)*
-  - [ ] Apresentar o argumento do calçadão da XV → [[A Hipótese em Teste]]
-  - [ ] Confirmar que o novo título e o recorte estão aceitos
-- [ ] **T2 — Cotar e comprar o hardware** ⭐ *(início do caminho crítico)*
-  - [ ] Rodar a pesquisa de preços → [[Lista de Componentes]]
-  - [ ] Fechar as camadas do orçamento → [[Orçamento em Camadas]]
-  - [ ] Comprar (só lojas nacionais, entrega 3–10 dias)
-- [ ] **T4 — Firmware no Wokwi** *(não espera peça chegar)*
-  - [ ] Esqueleto: leitura, gravação em SD, OLED, RTC
-  - [ ] Definir e congelar o formato do CSV
-- [ ] **T5 — A-weighting no desktop** *(não espera peça chegar, e é a tarefa mais difícil)*
-  - [ ] Implementar o filtro e validar contra WAV de referência → [[Ponderação A e LAeq]]
-- [ ] **T3 — Reconhecimento dos 12 pontos** → [[Amostra Estratificada]]
-- [ ] Criar repositório GitHub
-- [ ] Verificar se a PUC empresta calibrador acústico → [[Calibração]]
-- [ ] Combinar as 12 datas de campo com os 5 membros → [[Alocação do Grupo]]
+## ✅ FASE 0 — Definição de Escopo e Arquitetura (CONCLUÍDA)
+- [x] Análise crítica da hipótese e reformulação metodológica híbrida (A+B) → [[01 - Visao Geral e Escopo]]
+- [x] Definição de 12 pontos estratificados e protocolo com ponto-âncora → [[02 - Metodologia de Medicao]]
+- [x] Definição dos 6 entregáveis e roteiro da banca → [[03 - Entregaveis e Validacao]]
+- [x] Lista de componentes e orçamento fechados no cenário super econômico (~R$ 212) → [[01 - Lista de Componentes e Orcamento]]
+- [x] Mapa de pinagem e barramentos definidos → [[02 - Montagem e Pinagem]]
+- [x] Registro de todas as decisões técnicas fundamentadas (D-01 a D-19) → [[Registro de Decisões]]
 
 ---
 
-## 📅 Marcos
+## 🔜 FASE 1 — Firmware, Simulação e Bancada (EM ANDAMENTO)
+- [x] **Setup Wokwi & Firmware Base (T4)** ✅
+  - [x] Circuito virtual montado com ESP32, OLED, DHT22 e SD (`diagram.json`)
+  - [x] Firmware com rotina de auto-teste no boot (`src/main.cpp`)
+  - [x] Servidor Web HTTP local servindo página com dados em tempo real
+  - [x] Arquivo de teste web independente (`dashboard_preview.html`)
+- [ ] **Compra do Hardware Físico (T2)** ⭐ *(Início do caminho crítico)*
+  - [ ] Realizar compra única centralizada no Mercado Livre / loja especializada
+- [ ] **Montagem e Leitura I2S Real (T7 / T8)**
+  - [ ] Montar circuito na protoboard 830 pontos
+  - [ ] Capturar áudio com INMP441 via I2S DMA e aplicar ponderação A
+
+---
+
+## 📅 Marcos do Cronograma
 
 | Marco | Semana | Situação |
 |---|---|---|
-| Escopo fechado | S1 | ✅ Feito |
-| Hardware comprado | S1 | ⬜ **Próximo** |
-| Estação medindo na bancada | S4 | ⬜ |
-| Estação calibrada | S5 | ⬜ |
-| Coleta piloto validada | S5 | ⬜ |
-| 48 medições concluídas | S9 | ⬜ |
-| Mapa web publicado | S11 | ⬜ |
-| Feira | S12 | ⬜ |
+| Escopo e Metodologia fechados | S1 | ✅ Concluído |
+| Simulação Wokwi & Firmware Base | S2 | ✅ Concluído |
+| Hardware comprado e entregue | S2 | ⬜ **Próximo** |
+| Estação montada e medindo na bancada | S4 | ⬜ |
+| Coleta piloto e calibração validadas | S5 | ⬜ |
+| 48 medições nos 12 pontos concluídas | S9 | ⬜ |
+| Pipeline Python e Mapa Web publicados | S11 | ⬜ |
+| Apresentação na Mostra / Feira | S12 | ⬜ |
 
-Detalhamento completo em [[WBS e Gantt]].
-
----
-
-## ⚠️ O que mais preocupa agora
-
-1. **Ninguém do grupo montou um ESP32 físico antes** — o SIA anterior foi todo simulado. Mitigação: T4 e T5 rodam em paralelo à entrega.
-2. **A compra ainda não foi feita** e é o início do caminho crítico.
-3. **As 12 datas de campo dependem de 5 pessoas simultaneamente** — é agenda, não esforço. Combinar já em S3.
-
-Ver [[Riscos]] para a lista completa.
+Detalhamento em [[01 - WBS e Cronograma Geral]] e [[02 - Sprints e Backlog]].

@@ -32,25 +32,35 @@ Log de todas as decisões do projeto. Formato: **Contexto → Decisão → Conse
 
 ## Hardware
 
-### D-05 — RTC DS3231 no lugar do GPS `[Reform]`
-- **Contexto:** a proposta original previa GPS NEO-6M. Em ponto fixo, a coordenada é conhecida e o celular a fornece com precisão equivalente (~5 m), com a vantagem de permitir média.
-- **Decisão:** **remover o GPS** e usar um **DS3231** só para timestamp. Coordenadas registradas manualmente pelo escriba.
-- **Consequência:** economiza ~R$40 **e uma fase inteira do cronograma** (parsing NMEA, espera de fix) — o que pesa muito num grupo sem experiência prévia com ESP32 físico. GPS fica como upgrade opcional.
+### D-05 — GPS NEO-6M para geolocalização e relógio atômico `[Atualizado]`
+- **Contexto:** o RTC exigiria conferência manual antes de cada sessão de campo e anotação manual de coordenadas. O grupo optou pela inclusão do GPS NEO-6M.
+- **Decisão:** usar o **GPS NEO-6M** conectado via UART (Serial 2). O GPS fornece Latitude, Longitude, Altitude e o timestamp UTC exato.
+- **Consequência:** o módulo RTC DS3231 é eliminado. O arquivo CSV já nasce com coordenadas e data/hora automáticas.
 
 ### D-06 — Microfone MEMS digital I2S, não analógico `[Reform]`
 - **Contexto:** módulos analógicos baratos (KY-038, MAX9814, MAX4466) são o padrão em tutoriais de Arduino.
 - **Decisão:** **INMP441** (ou ICS-43434). Inegociável.
 - **Consequência:** módulos analógicos entregam **nível relativo**, não dB SPL — não têm sensibilidade especificada em datasheet, então não há como converter para unidade física. Usar um deles invalidaria o projeto inteiro. Ver [[Lista de Componentes]].
 
-### D-07 — Sem calibrador acústico `[Reform]`
-- **Contexto:** o padrão-ouro de calibração é um pistonfone (94 dB @ 1 kHz), que custa ~R$400+ — mais que o resto do projeto somado.
-- **Decisão:** calibrar por **transferência**, comparando com um decibelímetro classe 2 em ≥3 níveis distintos. Tentar empréstimo de calibrador em laboratório da PUC.
-- **Consequência:** os valores são defensáveis, mas com incerteza maior. **Declarar explicitamente como limitação metodológica** no relatório. Ver [[Calibração]].
+### D-07 — Sem calibrador acústico / Decibelímetro comercial dispensado `[Atualizado]`
+- **Contexto:** um decibelímetro comercial classe 2 encarece o orçamento em R$ 180–250.
+- **Decisão:** dispensar a compra de decibelímetro comercial para a estação. A medição de nível sonoro é calculada matematicamente pela sensibilidade de datasheet do INMP441 ($-26\text{ dBFS}$ @ $94\text{ dB SPL}$). Se houver oportunidade, valida-se pontualmente com equipamento emprestado no laboratório da PUC.
+- **Consequência:** orçamento total cai para ~R$ 212 (~R$ 42/pessoa).
 
 ### D-08 — Gravação local em microSD, sem conectividade em campo `[Reform]`
 - **Contexto:** enviar dados em tempo real exigiria módulo celular (2G sendo desligado no Brasil; 4G caro demais).
 - **Decisão:** grava CSV no cartão, transfere depois no WiFi de casa.
 - **Consequência:** simplifica muito o firmware. Cria um ponto único de falha — se o cartão corromper, a sessão se perde. Por isso o teste de queda de energia está em [[Verificação]].
+
+### D-15 — ESP32-WROOM-32 DevKit V1 (30 pinos) `[Fechado]`
+- **Contexto:** escolha entre WROOM-32 e ESP32-S3.
+- **Decisão:** adotar o **ESP32-WROOM-32 (versão 30 pinos)**.
+- **Consequência:** excelente custo (~R$ 38), sobra espaço na protoboard 830 pontos e suporta perfeitamente I2S DMA, filtro IIR e UART do GPS.
+
+### D-19 — Inclusão do sensor climático DHT22 `[Novo]`
+- **Contexto:** a velocidade e absorção acústica no ar variam com a temperatura e a umidade relativa do ambiente.
+- **Decisão:** incluir o sensor **DHT22 (AM2302)** para registrar temperatura (°C) e umidade (%) junto a cada medição acústica.
+- **Consequência:** adiciona valor analítico e rigor metodológico para o relatório final.
 
 ---
 
@@ -96,8 +106,6 @@ Log de todas as decisões do projeto. Formato: **Contexto → Decisão → Conse
 
 Estas ainda **não** foram tomadas e estão rastreadas em [[Status das Pendências]]:
 
-- **D-15** — Modelo exato do ESP32 (WROOM-32 vs. S3), dependente da cotação
-- **D-16** — Marca e modelo do decibelímetro de referência
 - **D-17** — Ponto-âncora: qual local exato será usado
 - **D-18** — Data exata da feira (o cronograma assume S12)
 
@@ -111,3 +119,4 @@ Copie o modelo abaixo, use o próximo número livre e **registre antes de execut
 > - **Contexto:** o que estava em jogo, qual era o problema.
 > - **Decisão:** o que foi decidido, sem ambiguidade.
 > - **Consequência:** o que isso obriga, permite ou impede daqui pra frente.
+

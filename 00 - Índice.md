@@ -1,65 +1,37 @@
 # 🔊 Mapa de Ruído de Curitiba — Índice do Cofre
 
-Ponto de partida de tudo. Este cofre é a **memória viva** do projeto: por que o escopo foi reformulado, como cada medição deve ser feita, o que ainda falta comprar e decidir, e o que estudar pra entender cada parte.
+Este cofre é a **documentação central e memória viva** do projeto de medição acústica urbana em Curitiba.
 
-> [!tip] Primeira vez aqui? Leia [[Como usar este cofre]].
-> [!important] Quer só saber o estado atual e o próximo passo? → [[Progresso do Projeto]]
-
----
-
-## 🚀 O projeto em uma frase
-
-Uma estação portátil de ~R$500 com **ESP32 + microfone I2S** medindo dB(A) em **12 pontos fixos** de Curitiba, para produzir um mapa de ruído e **testar** — em vez de assumir — a hipótese de que ruído serve como proxy de demanda por transporte público. Ver [[O que é o projeto]].
-
-**Entrega:** feira/mostra em **novembro/2026**. Grupo de **5 membros**.
+> [!important] Quer ver o estado atual e os próximos passos imediatos? → [[Progresso do Projeto]]
 
 ---
 
-## 🧭 Navegação
+## 🧭 Estrutura Consolidada do Cofre (4 Pastas)
 
-### Status (o "onde estamos")
-- [[Progresso do Projeto]] — foto do estado atual e o próximo passo. **Comece por aqui pra retomar.**
+### 1. 🎯 [[Planejamento]] (O Que e Como Fazer)
+* [[01 - Visao Geral e Escopo|01 — Visão Geral e Escopo]]: O projeto em uma frase, a hipótese do proxy acústico e limites do escopo.
+* [[02 - Metodologia de Medicao|02 — Metodologia de Medição]]: Os 12 pontos estratificados, o protocolo do ponto-âncora e a contagem manual de fluxo.
+* [[03 - Entregaveis e Validacao|03 — Entregáveis e Validação]]: Os 6 produtos finais, roteiro de demonstração da feira e plano de testes.
+* [[04 - Guia de Estudos e Referencias|04 — Guia de Estudos e Referências]]: Acústica, $dB(A)$, NBR 10151, repositórios de referência (`esp32-i2s-slm`) e stack de software.
 
-### Escopo (o "o quê")
-- [[O que é o projeto]] — o projeto inteiro em uma página.
-- [[Escopo Reformulado]] — **o contrato**: o que está dentro e o que ficou de fora.
-- [[A Hipótese em Teste]] — por que a premissa original não fecha, e o argumento do calçadão da XV.
+### 2. 📅 [[Cronograma]] (Quando e Quem)
+* [[01 - WBS e Cronograma Geral|01 — WBS e Cronograma Geral]]: As 12 semanas do projeto, caminho crítico, divisão de papéis e matriz de riscos.
+* [[02 - Sprints e Backlog|02 — Sprints e Backlog]]: Backlog do produto organizado em sprints quinzenais.
+* [[03 - Pendencias e Status|03 — Pendências e Status]]: Rastreamento de bloqueios e pendências resolvidas.
 
-### Decisões (o "porquê")
-- [[Registro de Decisões]] — log de todas as decisões, com contexto e consequência.
+### 3. 🔌 [[Hardware]] (Com o Quê)
+* [[01 - Lista de Componentes e Orcamento|01 — Lista de Componentes e Orçamento]]: Lista oficial dos 10 itens (~R$ 212 total / ~R$ 42,40 por membro).
+* [[02 - Montagem e Pinagem|02 — Montagem e Pinagem]]: Mapeamento de pinos do ESP32 (I2S, SPI, I2C, UART, GPIO) e cuidados de montagem.
+* [[03 - Calibracao e Estimativa Acustica|03 — Calibração e Estimativa Acústica]]: Conversão de sensibilidade MEMS ($-26\text{ dBFS}$) para $L_{Aeq}\text{ dB SPL}$.
 
-### Metodologia (o "como medir")
-- [[Amostra Estratificada]] — os 12 pontos e por que cada tipologia está na amostra.
-- [[Protocolo de Medição]] — ponto-âncora, janelas horárias, altura, duração.
-- [[Contagem Manual]] — os 5 papéis em campo e a planilha.
-
-### Hardware (o "com o quê")
-- [[Lista de Componentes]] — o que comprar e o que **não** comprar.
-- [[Orçamento em Camadas]] — essencial → recomendado → desejável.
-- [[Montagem e Ligações]] — pinagem, alimentação e a caixa.
-- [[Calibração]] — como transformar número relativo em dB SPL de verdade.
-
-### Cronograma (o "quando")
-- [[WBS e Gantt]] — as 21 tarefas, dependências e caminho crítico.
-- [[Alocação do Grupo]] — quem faz o quê, com perfis mistos.
-- [[Riscos]] — o que pode dar errado e a mitigação de cada um.
-
-### Entrega (o "resultado")
-- [[Entregáveis]] — os 6 produtos finais.
-- [[Verificação]] — como saber que cada etapa funcionou de verdade.
-- [[Roteiro da Feira]] — o stand, a demo ao vivo e o plano B.
-
-### Pendências (o "o que falta decidir")
-- [[Status das Pendências]] — o que está aberto e o que bloqueia o quê.
-
-### Estudos (o "como aprender")
-- [[Cronograma de Estudos]] — roteiro na ordem em que o projeto precisa.
-- Destaque transversal: [[Acústica e dB(A)]] — o conhecimento que atravessa tudo.
-
-### Documentos-fonte
-- `Plano/_Histórico/` — a análise original de 24/08/2026, que originou a reformulação. Mantida só como histórico.
+### 4. ⚖️ [[Decisões]] (Por Quê)
+* [[Registro de Decisões]]: Log histórico de todas as decisões técnicas e metodológicas (D-01 a D-19).
 
 ---
 
-> [!note] Convenção de ouro
-> O [[Escopo Reformulado|escopo]] é o **contrato** e só muda com decisão explícita registrada em [[Registro de Decisões]]. As notas de Metodologia, Hardware e Estudos são a **memória viva** — atualizadas conforme o projeto anda. Se algo mudar em campo, registre aqui **antes** de continuar.
+## 💻 Ambiente de Simulação e Firmware
+* [diagram.json](file:///c:/MapaRuido/diagram.json): Circuito virtual no Wokwi (ESP32 + OLED + DHT22 + SD).
+* [wokwi.toml](file:///c:/MapaRuido/wokwi.toml): Configuração de execução do simulador Wokwi.
+* [platformio.ini](file:///c:/MapaRuido/platformio.ini): Gerenciamento de dependências e compilação em C++.
+* [src/main.cpp](file:///c:/MapaRuido/src/main.cpp): Firmware com máquina de estados, auto-teste e WebServer.
+* [dashboard_preview.html](file:///c:/MapaRuido/dashboard_preview.html): Visualização web local dos dados em tempo real.
